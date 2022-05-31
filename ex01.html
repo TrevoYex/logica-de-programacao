@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro exercício</title>
+</head>
+<body>
+    <h1>primeiro exercício</h1>
+
+    <script>
+        //pedir para o usuario digitar um número
+        var n1 = prompt('Digite um número')
+
+        //converter em número inteiro
+        n1 = parseInt(n1)
+
+        //pedir para o usuário digitar outro número
+        var n2 = prompt('Digite outro número:')
+
+        //converter em número inteiro
+        n2 = parseInt(n2)
+
+        //mostrar a subtração concatenando com o texto "a subtração é: ..."
+        var valorsub = n1 - n2
+        alert(`A subtração é ${n1} - ${n2} = ${valorsub}`)
+
+        //mostra a multiplicação concatenando com o texto "a multiplicação é: ..."
+        //mostrar a soma concatenando com o texto "a soma é: ..."
+        var valorsom = n1 + n2
+        alert(`A soma é ${n1} + ${n2} = ${valorsom}`)
+    </script>
+</body>
+</html>
