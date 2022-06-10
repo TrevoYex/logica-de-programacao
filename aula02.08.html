@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação com Javascript</title>
+</head>
+<body>
+    <h1>Controle de decisão</h1>
+    <p>pedir para o usuário digitar um número de 1 a 6. Mostrar na tela uma mensagem diferente para cada número</p>
+
+    <script>
+        var nome = parseInt(prompt('Digite seu primeiro nome: '))
+        var comprimento = nome.length
+
+        switch(comprimento) {
+            case 1:
+                alert('oi')
+                break
+            case 2:
+                alert('ola')
+                break
+            case 3:
+                alert('teste')
+                break
+            default:
+                alert('não deu!')
+        }
+
+        var numero = prompt('Digite um número')
+
+        switch(numero) {
+            case "1":
+                alert('é string')
+                break
+            case 1:
+                alert('é numero')
+                break
+        }
+
+    </script>
+</body>
+</html>
