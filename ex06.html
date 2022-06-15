@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <p>Para este exercicio aplique a lógica necessário para mostrar os anos que são realmente bissextos, respeitando a regra:&nbsp;Os anos bissextos são múltiplos de 4,&nbsp;<u>não</u>&nbsp;múltiplos de 100 (1900 não é bissexto) e múltiplos de 400 (2000 é bissexto). (fonte:<a href="http://www.ponteiro.com.br/bisse.php" rel="nofollow" target="_blank">http://www.ponteiro.com.br/bisse.php</a>)</p>
+
+    <script>
+        document.write('<hr>')
+        var ano = 1004
+        while (ano <= 2025) {
+            if( !(ano % 100 === 0) || (ano % 400 === 0)) {
+                document.write(ano + ' <br>')
+            } else {
+                document.write(ano + ' não é bissexto<br>')
+            }
+            // ano = ano + 4
+            ano += 4
+        }
+        document.write('ACABOU!!')
+    </script>
+</body>
+</html>
