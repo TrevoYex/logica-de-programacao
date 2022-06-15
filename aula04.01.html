@@ -7,26 +7,66 @@
     <title>Tabuda</title>
     <style>
         body {
-            background-color: black;
-            color: white;
+            background-color: lightgrey;
+            color: black;
             font-family: Arial, Helvetica, sans-serif;
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        button {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        button:hover {
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <h1>Inserção de conteúdo</h1>
     <p>Pedir para o usuário digitar um número e mostrar a tabuada desse número de 1 a 1000. Deve ter a possibilidade do usuário digitar outro número e também de limpar a tabuada gerada previamente</p>
+    <button onclick="mostrarTabuada()">Criar Tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
     <div id="output"</div>
 
     <script>
+
+        function mostrarTabuada() {
+            // perguntar o número para o usuario
+            var n = prompt('Digite um número')
+
+            limparTabuada()
+            // converter o numero
+            var n = parseFloat(n)
+            // criar uma variavel que servira de indice
+            var i = 1
+            // enquanto indice <= 1000
+                // concatena na variavel mensagem
+                while (i <= 1000) {
+                    mensagem += n + ' x ' + i + ' = ' + (n*i) + ' <br>'
+                    i++
+                }
+
+                output.innerHTML = mensagem
+            // mostra mensagem no output
+        }
+
+        function limparTabuada() {
+            mensagem = ''
+            output.innerHTML = mensagem
+        }
+
         var output = document.querySelector('#output')
 
         var mensagem = ''
-        for (var i = 0; i < 1001; i++) {
-            mensagem += 'i: ' + i + '<br>'
-        }
+        
 
-        output.innerHTML = mensagem
+        
     </script>
 </body>
 </html>
