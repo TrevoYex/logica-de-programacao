@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação com JavaScript</title>
+    <style>
+        body {
+            background-color: #8a2be2;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.4em;
+            padding: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 200;
+            text-shadow: 3px 3px 11px rgba(0, 0, 0, 0.541);
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            transition: 0.3s all;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+
+        button:hover {
+            outline: solid 2px rgba(0, 0, 0, 0.336);
+            cursor: pointer;
+            transition: 0.3s all;
+        }
+
+        .res {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operações matemáticas</h1>
+    <button onclick="mostrar()">Mostrar resultados</button>
+    <div class="res"></div>
+
+    <script>
+        function mostrar() {
+        //pedir para o usuario digitar um numero
+            var number1 = prompt('Digite um número:')
+            //converter em numero inteiro
+            number1 = parseFloat(number1)               
+            //pedir para o usuario digitar outro numero
+            //converter em numero inteiro
+            var number2 = parseFloat(prompt('Digite outro número:'))    
+            
+            //mostrar a subtração concatenando com o texto "a subtração é: ..."
+            res.innerHTML = 'A subtração de ' + number1 + ' - ' + number2 + ' = ' + (number1 - number2) + ' <br>' 
+            //mostrar a multiplicação concatenando com o texto "a multiplicação é: ..."
+            res.innerHTML += 'A multiplicação de ' + number1 + ' x ' + number2 + ' = ' + (number1 * number2) + ' <br>'
+            //mostrar a divisão concatenando com o texto "a divisão é: ..."
+            res.innerHTML += 'A divisão de ' + number1 + ' : ' + number2 + ' = ' + (number1 / number2) + ' <br>'
+            //mostrar a soma concatenando com o texto "a soma é: ..."
+            res.innerHTML += 'A soma de ' + number1 + ' + ' + number2 + ' = ' + (number1 + number2) + ' <br>'
+        }
+            var res = document.querySelector('.res')
+    </script>
+</body>
+</html>
