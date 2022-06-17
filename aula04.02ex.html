@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação com JavaScript</title>
+</head>
+<body>
+    <h1>Lógica de Programação com JavaScript</h1>
+    <p>Pedir para o usuário digitar dois números que representam os lados de um retângulo assim que a página é carregada. Mostrar na tela a área total quando clicar num botão5</p>
+    <button onclick="mostrarArea(largura, altura)">Mostrar Área</button>
+
+    <script>
+        var largura = prompt('Digite a largura')
+        largura = parseFloat(largura)
+
+        var altura = parseFloat(prompt('Digite a altura:'))
+
+        function mostrarArea(l, a) {
+            alert('área total: ' + ( l * a ))
+        }
+
+        mostrarArea(5, 10)
+    </script>
+</body>
+</html>
