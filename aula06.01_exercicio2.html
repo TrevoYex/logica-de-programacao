@@ -13,8 +13,17 @@
         var arr = new Array(25, 30, 45, 28, 0, 12, 78, 64)
         //mostrar na tela a soma dos números pares da array acima
         // número par não tem resto (fazer com %)
-        var total = arr % 2
-        
+        var soma = 0;
+        for(var i = 0; i < arr.length; i++) {
+            console.log(i);
+            console.log(arr[i])
+
+            if(!isNaN(arr[i]) && arr[i] % 2 === 0) {
+                soma += arr[i]
+            }
+        }
+
+        alert('a soma dos números pares é: ' + soma);
         
     </script>
 </body>
